@@ -1,0 +1,15 @@
+# Environments
+
+.env
+
+# Cache
+__pycache__/
+
+# Migrations Local
+migrations_local/
+
+# Coverage
+.coverage
+htmlcov/
+migrations/
+mydatabase
