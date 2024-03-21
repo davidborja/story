@@ -18,13 +18,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587  # TLS
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "borjacazalesdavid@gmail.com"
-EMAIL_HOST_PASSWORD = ""
-
-DEFAULT_FROM_EMAIL = "borjacazalesdavid@gmail.com"
+EMAIL_HOST = config("EMAIL_HOST")
+EMAIL_HOST_USER = config("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
+EMAIL_PORT = config("EMAIL_PORT")
 
 
 EMAIL_USE_SSL = False  # O False, dependiendo de tu configuración
@@ -94,7 +91,7 @@ WSGI_APPLICATION = "storyChallenge.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
+"""
 DATABASES = {
     "default": {
         "ENGINE": config("ENGINE"),
@@ -106,6 +103,7 @@ DATABASES = {
     }
 }
 """
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -113,7 +111,6 @@ DATABASES = {
     }
 }
 
-"""
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
