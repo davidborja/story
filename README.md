@@ -1,7 +1,40 @@
 
 # Stori Accounts Django App
 
-This Django app named "Stori Accounts" provides CRUD (Create, Read, Update, Delete) functionality for various endpoints related to users, accounts, transactions, account types, and templates.
+This Django app named "Stori Accounts" provides CRUD (Create, Read, Update, Delete) functionality for various endpoints related to users, accounts, transactions, account types, templates and send mail.
+
+## Installation
+
+1. Clone this repository:
+
+
+git clone <repository_url>
+cd stori
+Install dependencies using the provided requirements.txt file:
+
+pip install -r requirements.txt
+Create a .env file in the root directory with the following content:
+
+EMAIL_HOST=sandbox.smtp.mailtrap.io
+EMAIL_HOST_USER=xxxxxx
+EMAIL_HOST_PASSWORD=xxxxx
+EMAIL_PORT=2525
+
+ENGINE=django.db.backends.postgresql_psycopg2
+DATABASE_NAME=xxxxx
+DATABASE_USER=xxxxx
+DATABASE_PASSWORD=xxxxx
+DATABASE_HOST=127.0.0.1
+DATABASE_PORT=5432
+PORT=8000
+HOST=0.0.0.0
+
+Run database migrations to initialize the database schema:
+
+python manage.py makemigrations
+python manage.py migrate
+CRUD Endpoints
+
 
 ## Endpoints
 
